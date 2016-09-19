@@ -1,1 +1,1 @@
-CREATE DATABASE adippena_db;
+CREATE DATABASE db_adippena;
