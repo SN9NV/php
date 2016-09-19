@@ -1,6 +1,6 @@
 <?php
 if ($_POST['submit'] != "OK" || $_POST['login'] == NULL || $_POST['oldpw'] == NULL || $_POST['newpw'] == NULL) {
-    echo "ERROR submit\n";
+    echo "ERROR\n";
     return;
 }
 
