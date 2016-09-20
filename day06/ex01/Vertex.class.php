@@ -1,7 +1,7 @@
 <?php
 //	require "Color.class.php";
 
-	class vertex {
+	class Vertex {
 		private $_x = 0.0;
 		private $_y = 0.0;
 		private $_z = 0.0;

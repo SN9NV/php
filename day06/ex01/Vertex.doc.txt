@@ -1,14 +1,14 @@
-<- vector ----------------------------------------------------------------------
-The vector class handles 3 dimentional vectors.
+<- vertex ----------------------------------------------------------------------
+The vertex class handles 3 dimentional vectors.
 
 An instance can be constructed from x, y and z values, with an optional w value or color class:
-new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
-new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0 ) );
-new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0, 'color' = $color_class) );
-new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, color' = $color_class) );
+new vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+new vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0 ) );
+new vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0, 'color' = $color_class) );
+new vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, color' = $color_class) );
 
 The class has the following methods/options :
-vector::doc();		displays this document file;
+vertex::doc();		displays this document file;
 
-vector::verbose();	provides verbose printout of the class
----------------------------------------------------------------------- vector ->
+vertex::verbose();	provides verbose printout of the class
+---------------------------------------------------------------------- vertex ->
