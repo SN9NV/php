@@ -1,24 +1,14 @@
 <- vector ----------------------------------------------------------------------
-The Color class handles RGB colors.
+The vector class handles 3 dimentional vectors.
 
-An instance can be constructed from either an RGB value:
-new Color( array( 'rgb' => 12345 ) );
+An instance can be constructed from x, y and z values, with an optional w value or color class:
+new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0 ) );
+new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0, 'color' = $color_class) );
+new vector( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, color' = $color_class) );
 
-Or from distinct red, green, blue components:
-new Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) );
+The class has the following methods/options :
+vector::doc();		displays this document file;
 
-Red, green, blue components and RGB values are converted to integers.
-Negative or > to 255 color values are left as is.
-Any other use is undefined behavior.
-
-The class provides the following methods :
-
-Color	add( Color $color_class_to_add );
-Adds each color component and returns a new Color instance.
-
-Color	sub( Color $color_class_to_subtract );
-Subtracts each color component and returns a new Color instance.
-
-Color	mult( $scalar );
-Multiplies each color component by $scalar and returns a new Color instance.
+vector::verbose();	provides verbose printout of the class
 ---------------------------------------------------------------------- vector ->

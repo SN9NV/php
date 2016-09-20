@@ -2,12 +2,12 @@
 //	require "Color.class.php";
 
 	class vertex {
-		private $_x = 0;
-		private $_y = 0;
-		private $_z = 0;
-		private $_w = 0;
+		private $_x = 0.0;
+		private $_y = 0.0;
+		private $_z = 0.0;
+		private $_w = 1.0;
 	 	private $_color;
-		static $verbose = false;
+		public static $verbose = false;
 
 		public static function doc() {
 			print(file_get_contents('Vertex.doc.txt'));
@@ -29,8 +29,8 @@
 			else {
 				$this->_color = new Color(array('rgb' => 0xFFFFFF));
 			}
-			if ($this::verbose) {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, %s ) constructed\n", $_x, $_y, $_z, $color);
+			if ($this::$verbose) {
+				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 		}
 
@@ -66,17 +66,17 @@
 		}
 
 		public function __toString() {
-			if ($this::verbose) {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, %s )", $_x, $_y, $_z, $color);
+			if ($this::$verbose) {
+				return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s )", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 			else {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f )", $_x, $_y, $_z);
+				return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
 			}
 		}
 
 		public function __destruct() {
-			if ($this::verbose) {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, %s ) destructed\n", $_x, $_y, $_z, $color);
+			if ($this::$verbose) {
+				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 		}
 	}
