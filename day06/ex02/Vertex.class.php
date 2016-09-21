@@ -30,7 +30,7 @@
 				$this->_color = new Color(array('rgb' => 0xFFFFFF));
 			}
 			if ($this::$verbose) {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
+				printf("Vertex( x:%.2f, y:%.2f, z:%.2f, w:%.2f, %s ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 		}
 
@@ -69,16 +69,16 @@
 
 		public function __toString() {
 			if ($this::$verbose) {
-				return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s )", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
+				return sprintf("Vertex( x:%.2f, y:%.2f, z:%.2f, w:%.2f, %s )", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 			else {
-				return sprintf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
+				return sprintf("Vertex( x:%.2f, y:%.2f, z:%.2f, w:%.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
 			}
 		}
 
 		public function __destruct() {
 			if ($this::$verbose) {
-				printf("Vertex( x: %.2f, y: %.2f, z: %.2f, w: %.2f, %s ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
+				printf("Vertex( x:%.2f, y:%.2f, z:%.2f, w:%.2f, %s ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w, $this->_color);
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-<- vertex ----------------------------------------------------------------------
+<- Vertex ----------------------------------------------------------------------
 The vertex class handles 3 dimentional vectors.
 
 An instance can be constructed from x, y and z values, with an optional w value or color class:
@@ -11,4 +11,4 @@ The class has the following methods/options :
 vertex::doc();		displays this document file;
 
 vertex::verbose();	provides verbose printout of the class
----------------------------------------------------------------------- vertex ->
+---------------------------------------------------------------------- Vertex ->

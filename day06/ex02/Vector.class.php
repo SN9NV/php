@@ -21,18 +21,18 @@
 			$this->_z = $this->_dest->z - $this->_orig->z;
 			$this->_w = $this->_dest->w - $this->_orig->w;
 			if ($this::$verbose) {
-				printf("Vector( x: %.2f, y: %.2f, z: %.2f, w: %.2f ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
+				printf("Vector( x:%.2f, y:%.2f, z:%.2f, w:%.2f ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
 			}
 		}
 
 		public function __destruct() {
 			if ($this::$verbose) {
-				printf("Vector( x: %.2f, y: %.2f, z: %.2f, w: %.2f ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
+				printf("Vector( x:%.2f, y:%.2f, z:%.2f, w:%.2f ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
 			}
 		}
 
 		public function __toString() {
-			return sprintf("Vector( x: %.2f, y: %.2f, z: %.2f, w: %.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
+			return sprintf("Vector( x:%.2f, y:%.2f, z:%.2f, w:%.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
 		}
 
 		public static function doc() {

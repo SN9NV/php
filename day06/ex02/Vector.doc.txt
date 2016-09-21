@@ -1,0 +1,21 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class handles 3 dimentional Vectors with an origin and a destination.
+
+An instance can be constructed from a [dest]ination Vertex class with an optional [orig]in Vertex class:
+new Vector = (array('dest' = $Vertex1));
+new Vector = (array('dest' = $Vertex1, 'orig' = $Vertex2));
+
+The class has the following methods/options :
+Vector::doc();						displays this document file
+Vector->magnitude();				returns the length/magnitude of the vector
+Vector->normalize();				returns a new, normalized version of the Vector
+Vector->add(Vector $v2);			returns the sum of Vector and Vector $v2
+Vector->sub(Vector $v2);			returns the difference of Vector and Vector $v2
+Vector->opposite();					returns the opposite Vector (-x, -y, -z)
+Vector->scalarProduct($s);			returns the Vector, scaled by scalar $s
+Vector->dotProduct(Vector $v2);		returns the dot product of Vector and Vector $v2
+Vector->cos(Vector $v2);			returns the cos angle between the normalized 	Vector and normalized Vector $v2
+Vector->crossProduct(Vector $v2);	returns the cross product between Vector and Vector $v2
+
+vertex::verbose();					provides verbose printout of the class
+---------------------------------------------------------------------- Vector ->
