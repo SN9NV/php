@@ -1,4 +1,3 @@
-USE db_adippena;
 SELECT f.title as Title, f.summary as Summary, f.prod_year
 FROM film as f
 INNER JOIN genre as g

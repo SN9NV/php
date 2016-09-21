@@ -1,4 +1,3 @@
-USE db_adippena;
 SELECT title, summary
 FROM film
 WHERE LOWER(summary)
