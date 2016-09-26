@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calc</title>
+		<script type="text/javascript">
+			setInterval(function() {
+				window.alert("Please, use me...");
+			}, 30000);
+		</script>
+	</head>
+	<body>
+		<form action="calc.html" onsubmit="return calc()">
+			LHS: <input type="text" id="lhs"><br/>
+			Operator: <select id="op">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select><br/>
+			RHS: <input type="text" id="rhs"><br/><br/>
+			<input type="submit" value="Try me!">
+		</form>
+
+		<script type="text/javascript">
+			function calc() {
+				var lhs = document.getElementById("lhs").value;
+				var rhs = document.getElementById("rhs").value;
+				var op = document.getElementById("op").value;
+
+				function isNumber(n) {
+					return /^[\d.]+(?:e-?\d+)?$/.test(n);
+				}
+
+				if (!isNumber(lhs)) {
+					window.alert("Error :(");
+					console.log("Error :(\n");
+					return false;
+				}
+
+				if (!isNumber(rhs)) {
+					window.alert("Error :(");
+					console.log("Error :(\n");
+					return false;
+				}
+
+				if (rhs == 0 && (op == '/' || op == '%')) {
+					window.alert("It's over 9000!");
+					console.log("It's over 9000!");
+					return false;
+				}
+
+				res = eval(lhs + op + rhs);
+				window.alert(res);
+				console.log(res + "\n");
+				return false;
+			}
+		</script>
+	</body>
+</html>
